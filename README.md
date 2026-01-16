@@ -50,21 +50,29 @@ Each skill contains:
 
 To use these skills with Claude Code:
 
-1. **Configure Claude Code to use the skills:**
+1. **Add the MetalBear skills marketplace:**
+```bash
+   /plugin marketplace add metalbear-co/skills
+```
 
-   Add the skills directory to your Claude Code configuration file (`~/.claude/config.json`):
+2. **Install the mirrord configuration skill:**
+```bash
+   /plugin install mirrord-config@metalbear-co-skills
+```
 
-   ```json
-   {
-     "skillDirectories": [
-       "/path/to/skills"
-     ]
-   }
-   ```
+   Or install all mirrord skills at once:
+```bash
+   /plugin install mirrord-skills@metalbear-co-skills
+```
 
-   Replace `/path/to/skills` with the absolute path to where you cloned this repository.
+3. **Use the skill:**
 
-2. **Restart Claude Code** to load the new skills.
+   Simply mention what you need in your conversation with Claude Code:
+```
+   "Help me create a mirrord config that filters HTTP POST requests"
+```
+
+   Claude will automatically use the mirrord-config skill to help you!
 
 ## Contributing
 
