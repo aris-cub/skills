@@ -46,6 +46,26 @@ Each skill contains:
 - `scripts/` - Helper scripts for automation (optional)
 - `references/` - Supporting documentation (optional)
 
+## Installation
+
+To use these skills with Claude Code:
+
+1. **Configure Claude Code to use the skills:**
+
+   Add the skills directory to your Claude Code configuration file (`~/.claude/config.json`):
+
+   ```json
+   {
+     "skillDirectories": [
+       "/path/to/skills"
+     ]
+   }
+   ```
+
+   Replace `/path/to/skills` with the absolute path to where you cloned this repository.
+
+2. **Restart Claude Code** to load the new skills.
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
