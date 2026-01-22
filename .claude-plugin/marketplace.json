@@ -5,15 +5,17 @@
   "description": "Skills for working with mirrord - Kubernetes development tool by MetalBear",
   "owner": {
     "name": "MetalBear",
-    "email": "support@metalbear.co"
+    "email": "support@metalbear.com"
   },
   "plugins": [
     {
       "name": "mirrord-config",
       "description": "Helps users generate, edit, and validate mirrord.json configuration files for mirrord (MetalBear). Use when the user wants to connect their local process to a Kubernetes environment, configure features (env/fs/network), or needs feedback on an existing mirrord.json. Always ensures output JSON is valid and schema-conformant.",
-      "source": "./mirrord-config/mirrord-config",
+      "source": "./mirrord-config",
       "version": "1.0.0",
-      "category": "development"
+      "category": "development",
+      "keywords": ["mirrord", "kubernetes", "config"],
+      "skills": ["./"]
     }
   ]
 }
