@@ -1,5 +1,5 @@
 ---
-name: mirrord
+name: mirrord-config
 description: Helps users generate, edit, and validate mirrord.json configuration files for mirrord (MetalBear). Use when the user wants to connect their local process to a Kubernetes environment, configure features (env/fs/network), or needs feedback on an existing mirrord.json. Always ensures output JSON is valid and schema-conformant.
 metadata:
   author: MetalBear
@@ -19,9 +19,11 @@ Generate and validate `mirrord.json` configuration files:
 ## Critical First Steps
 
 **Step 1: Load references**
-Use the `view` tool to read BOTH reference files:
-1. `/mnt/skills/user/mirrord/references/schema.json` - Authoritative JSON Schema
-2. `/mnt/skills/user/mirrord/references/configuration.md` - Configuration reference
+Read BOTH reference files from this skill's `references/` directory:
+1. `references/schema.json` - Authoritative JSON Schema
+2. `references/configuration.md` - Configuration reference
+
+If using absolute paths, these are located relative to this skill's installation directory. Search for them if needed using patterns like `**/mirrord-config/references/*`.
 
 **Step 2: Install mirrord CLI (if not present)**
 ```bash
