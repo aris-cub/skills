@@ -1,0 +1,29 @@
+{
+  "name": "@metalbear/add-skill",
+  "version": "1.0.0",
+  "description": "CLI to install Claude Code skills from GitHub repositories",
+  "bin": {
+    "add-skill": "./bin/add-skill.js"
+  },
+  "files": [
+    "bin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/metalbear-co/skills"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "skills",
+    "cli"
+  ],
+  "author": "MetalBear",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

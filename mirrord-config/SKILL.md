@@ -19,9 +19,16 @@ Generate and validate `mirrord.json` configuration files:
 ## Critical First Steps
 
 **Step 1: Load references**
-Use the `view` tool to read BOTH reference files:
-1. `/mnt/skills/user/mirrord/references/schema.json` - Authoritative JSON Schema
-2. `/mnt/skills/user/mirrord/references/configuration.md` - Configuration reference
+Try to load references from the web first (most up-to-date), then fall back to local copies if needed:
+
+1. **Schema** (try in order):
+   - Web: Use `web_fetch` to load `https://raw.githubusercontent.com/metalbear-co/mirrord/main/mirrord-schema.json`
+   - If web fetch fails: Use `view` to read `${SKILL_DIR}/references/schema.json`
+   - Note: Schema is large (40k+ tokens), use search/grep if needed instead of reading entire file
+
+2. **Configuration Documentation** (try in order):
+   - Web: Use `web_fetch` to load `https://raw.githubusercontent.com/metalbear-co/mirrord/main/configuration.md` (or the correct docs URL)
+   - If web fetch fails: Use `view` to read `${SKILL_DIR}/references/configuration.md`
 
 **Step 2: Install mirrord CLI (if not present)**
 ```bash
