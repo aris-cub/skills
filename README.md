@@ -1,4 +1,4 @@
-![Mirord Agent Skills](assets/mirrord-agent-skills.png)
+![Mirrord Agent Skills](assets/mirrord-agent-skills.png)
 # Mirrord Agent Skills
 
 A collection of skills for AI coding agents to work with MetalBear's mirrord. Skills are packaged instructions and scripts that extend agent capabilities for Kubernetes development workflows.
@@ -31,12 +31,11 @@ npx skills add metalbear-co/skills
 
 Skills are automatically available once installed. The agent will use them when relevant tasks are detected.
 
-**Example:**
-- "Create a mirrord.json file that filters  incoming traffic  not by header but by  body  in the request that is being sent . For example if in the body I have a json that looks like this " {   id: "grizzly",   name: "Grizzly",   price: 25,   qty: 1, }" I want the filter to send me only when the body id equals "grizzly" if its a diffrent value I should get it."
-
-
-**Example:**
+**Examples:**
+- "Create a mirrord config to steal traffic on port 3000 from pod/api-server"
+- "Validate my mirrord.json and fix any errors"
 - "I'm new to mirrord, how do I get started?"
+- "Help me connect my local Python app to my staging Kubernetes cluster"
 
 ## Skill Structure
 

@@ -14,7 +14,7 @@
       "source": "./",
       "version": "1.0.0",
       "category": "development",
-      "keywords": ["mirrord", "kubernetes", "config"],
+      "keywords": ["mirrord", "kubernetes", "config", "k8s"],
       "skills": [
         "./skills/mirrord-config",
         "./skills/mirrord-quickstart"

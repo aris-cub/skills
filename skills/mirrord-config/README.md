@@ -1,33 +1,36 @@
-# Mirrord Skill Installation
+# mirrord-config
 
-## Structure
+Generate, validate, and fix mirrord configuration files.
+
+## What it does
+
+This skill helps AI agents:
+- **Generate** valid `mirrord.json` configs from natural language
+- **Validate** existing configs against the official schema
+- **Fix** invalid configurations with explanations
+- **Explain** configuration options and patterns
+
+## Example prompts
+
 ```
-mirrord/
-├── SKILL.md                    # Main skill instructions
-└── references/
-    ├── configuration.md        # Configuration reference (1805 lines)
-    └── schema.json            # JSON Schema (3208 lines)
+"Generate a mirrord config for pod api-server in staging namespace"
+
+"Validate my mirrord.json" (paste your config)
+
+"Configure mirrord to steal traffic on port 8080"
+
+"Help me set up HTTP header filtering for my mirrord config"
 ```
 
-## Installation
+## How it works
 
-1. Copy the entire `mirrord` directory to `/mnt/skills/user/` in your Claude environment
-2. The skill will automatically appear in your available skills list
-3. Claude will read the reference files when you ask mirrord-related questions
+1. Reads the official mirrord JSON schema and configuration reference
+2. Generates or validates configs based on your request
+3. Runs `mirrord verify-config` for authoritative validation
+4. Returns validated JSON with explanations
 
-## Usage
+## References
 
-Just ask Claude to:
-- "Generate a mirrord config for pod X in namespace Y"
-- "Validate my mirrord.json" (attach your config)
-- "Help me configure mirrord to steal traffic on port 8080"
-
-Claude will automatically load the schema and configuration references before responding.
-
-## Changes from Original
-
-✓ Removed vector DB/retrieval assumptions  
-✓ Uses `view` tool to read references instead  
-✓ Works with actual Claude skill architecture  
-✓ Kept all operational guidance and quality requirements  
-✓ Streamlined for clarity
+This skill uses local reference files:
+- `references/schema.json` — mirrord JSON Schema
+- `references/configuration.md` — Configuration reference
