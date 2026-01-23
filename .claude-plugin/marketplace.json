@@ -16,7 +16,8 @@
       "category": "development",
       "keywords": ["mirrord", "kubernetes", "config"],
       "skills": [
-        "./skills/mirrord-config"
+        "./skills/mirrord-config",
+        "./skills/mirrord-quickstart"
       ]
     }
   ]
