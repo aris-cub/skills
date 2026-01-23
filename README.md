@@ -1,4 +1,5 @@
-# Agent Skills
+![Mirord Agent Skills](assets/mirrord-agent-skills.png)
+# Mirrord Agent Skills
 
 A collection of skills for AI coding agents to work with MetalBear's mirrord. Skills are packaged instructions and scripts that extend agent capabilities for Kubernetes development workflows.
 
