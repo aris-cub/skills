@@ -25,6 +25,7 @@ npx skills add metalbear-co/skills
 |-------|-------------|
 | [mirrord-config](./skills/mirrord-config/) | Generate and validate mirrord.json configs |
 | [mirrord-quickstart](./skills/mirrord-quickstart/) | Get started with mirrord from zero |
+| [mirrord-operator](./skills/mirrord-operator/) | Set up operator for team environments |
 
 
 ## Usage
@@ -36,6 +37,7 @@ Skills are automatically available once installed. The agent will use them when 
 - "Validate my mirrord.json and fix any errors"
 - "I'm new to mirrord, how do I get started?"
 - "Help me connect my local Python app to my staging Kubernetes cluster"
+- "Install mirrord operator for my team"
 
 ## Skill Structure
 

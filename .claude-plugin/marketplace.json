@@ -17,7 +17,8 @@
       "keywords": ["mirrord", "kubernetes", "config", "k8s"],
       "skills": [
         "./skills/mirrord-config",
-        "./skills/mirrord-quickstart"
+        "./skills/mirrord-quickstart",
+        "./skills/mirrord-operator"
       ]
     }
   ]
