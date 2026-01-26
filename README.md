@@ -1,43 +1,43 @@
-# Agent Skills
+![Mirrord Agent Skills](assets/mirrord-agent-skills.png)
+# Mirrord Agent Skills
 
 A collection of skills for AI coding agents to work with MetalBear's mirrord. Skills are packaged instructions and scripts that extend agent capabilities for Kubernetes development workflows.
 
 Skills follow the [Agent Skills format](https://agentskills.io/home).
 
+## Installation
+
+### Using npx (requires Node.js)
+
+```bash
+npx skills add metalbear-co/skills
+```
+
+### Claude Code plugin
+
+```bash
+/plugin marketplace add metalbear-co/skills
+```
+
 ## Available Skills
 
-### mirrord-config
-
-Generate, validate, and edit [mirrord](https://mirrord.dev) configuration files. Helps you create valid `mirrord.json` configs for connecting local processes to Kubernetes environments.
-
-**Use when:**
-- "Generate a mirrord config for..."
-- "Validate my mirrord.json"
-- "Fix my mirrord configuration"
-
-
-**Features:**
-- Generates valid configs from natural language descriptions
-- Validates against the official mirrord JSON schema
-- Uses `mirrord verify-config` CLI for authoritative validation
-- Fixes invalid configurations with explanations
-- Supports all mirrord features: env, fs, network, operator mode
-
-**How it works:**
-1. Reads the mirrord JSON schema and configuration reference
-2. Generates valid mirrord.json files based on your requirements
-3. Validates using `mirrord verify-config` command
-4. Returns validated JSON with explanations
-5. Uses [Schema](https://raw.githubusercontent.com/metalbear-co/mirrord/refs/heads/main/mirrord-schema.json) and [Configuration](https://metalbear.com/mirrord/docs/config) as references.
+| Skill | Description |
+|-------|-------------|
+| [mirrord-config](./skills/mirrord-config/) | Generate and validate mirrord.json configs |
+| [mirrord-quickstart](./skills/mirrord-quickstart/) | Get started with mirrord from zero |
+| [mirrord-operator](./skills/mirrord-operator/) | Set up operator for team environments |
 
 
 ## Usage
 
 Skills are automatically available once installed. The agent will use them when relevant tasks are detected.
 
-**Example:**
-- "Create a mirrord.json file that filters  incoming traffic  not by header but by  body  in the request that is being sent . For example if in the body I have a json that looks like this " {   id: "grizzly",   name: "Grizzly",   price: 25,   qty: 1, }" I want the filter to send me only when the body id equals "grizzly" if its a diffrent value I should get it."
-
+**Examples:**
+- "Create a mirrord config to steal traffic on port 3000 from pod/api-server"
+- "Validate my mirrord.json and fix any errors"
+- "I'm new to mirrord, how do I get started?"
+- "Help me connect my local Python app to my staging Kubernetes cluster"
+- "Install mirrord operator for my team"
 
 ## Skill Structure
 
@@ -46,33 +46,6 @@ Each skill contains:
 - `scripts/` - Helper scripts for automation (optional)
 - `references/` - Supporting documentation (optional)
 
-## Installation
-
-To use these skills with Claude Code:
-
-1. **Add the MetalBear skills marketplace:**
-```bash
-   /plugin marketplace add metalbear-co/skills
-```
-
-2. **Install the mirrord configuration skill:**
-```bash
-   /plugin install mirrord-config@metalbear-co-skills
-```
-
-   Or install all mirrord skills at once:
-```bash
-   /plugin install mirrord-skills@metalbear-co-skills
-```
-
-3. **Use the skill:**
-
-   Simply mention what you need in your conversation with Claude Code:
-```
-   "Help me create a mirrord config that filters HTTP POST requests"
-```
-
-   Claude will automatically use the mirrord-config skill to help you!
 
 ## Contributing
 
