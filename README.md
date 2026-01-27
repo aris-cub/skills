@@ -26,6 +26,7 @@ npx skills add metalbear-co/skills
 | [mirrord-config](./skills/mirrord-config/) | Generate and validate mirrord.json configs |
 | [mirrord-quickstart](./skills/mirrord-quickstart/) | Get started with mirrord from zero |
 | [mirrord-operator](./skills/mirrord-operator/) | Set up operator for team environments |
+| [mirrord-db-branching](./skills/mirrord-db-branching/) | Configure isolated database branches for development |
 
 
 ## Usage
