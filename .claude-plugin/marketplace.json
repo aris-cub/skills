@@ -18,7 +18,8 @@
       "skills": [
         "./skills/mirrord-config",
         "./skills/mirrord-quickstart",
-        "./skills/mirrord-operator"
+        "./skills/mirrord-operator",
+        "./skills/mirrord-ci"
       ]
     }
   ]
